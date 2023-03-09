@@ -1,0 +1,23 @@
+
+.avatarImage{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+
+}
+.avatarImage img{
+height: 200px;
+width: 200px;
+}
+.detail{
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+}
+ button{
+    border: none;
+}
+.like{
+    background-color: red;
+}
