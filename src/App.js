@@ -12,14 +12,14 @@ function App() {
     setAvatar(prevAvatar=>prevAvatar.map(val=>val._id===id?newAvatar:val))
   }
   useEffect(()=>{
-axios.get('http://localhost:9000/avatar').then(data=>setAvatar(data.data))
+axios.get('https://avatar-api.onrender.com/avatar').then(data=>setAvatar(data.data))
   },[])
 // console.log(avatar)
 
   return (
     <div className="App">
 <Row>
-{avatar.map(val=><Col xl={6} key={val._id}><Avatar avatar={val} deleteAvatar={deleteAvatar} updateAvatar={updateAvatar} /></Col>)}
+{avatar.map(val=><Col xl={6} lg={8} md={12} sm={24} xs={24} key={val._id}><Avatar avatar={val} deleteAvatar={deleteAvatar} updateAvatar={updateAvatar} /></Col>)}
 </Row>
     </div>
   );
